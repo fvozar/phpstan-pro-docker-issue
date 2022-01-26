@@ -1,0 +1,23 @@
+{
+  "name": "fvozar/phpstan-pro-issue",
+  "description": "Example repo for reproducing issue running phpstan pro inside docker",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+	{
+	  "name": "Filip Vozar",
+	  "email": "filip.vozar@gmail.com"
+	}
+  ],
+  "require": {
+	"php": "8.0.*"
+  },
+  "require-dev": {
+	"phpstan/phpstan": "^1.4"
+  },
+  "autoload": {
+	"psr-4": {
+	  "App\\": "src"
+	}
+  }
+}

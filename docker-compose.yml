@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    php:
+        image: thecodingmachine/php:8.0-v4-fpm
+        volumes:
+            - .:/var/www/html:cached
+            - ~/.phpstan-pro:/tmp/phpstan-fixer
+        environment:
+            PHP_EXTENSION_XDEBUG: 0
+            PHPSTAN_PRO_WEB_PORT: 4201
+        networks:
+            - default
+        expose:
+            - '9000'
+            - '4201'
+        ports:
+            - '4201:4201'
+
+networks:
+    default:
+        driver: bridge
